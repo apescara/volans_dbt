@@ -1,0 +1,5 @@
+[tool.sqlfmt]
+dialect = "polyglot"
+line_length = 88
+check = false
+exclude = ["target/**/*", "dbt_packages/**/*"]

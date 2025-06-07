@@ -1,0 +1,6 @@
+sources:
+  - name: data_base
+    schema: data_base
+    tables:
+      - name: citas
+      - name: pacientes

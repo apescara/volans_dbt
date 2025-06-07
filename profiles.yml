@@ -1,0 +1,13 @@
+volans_dbt:
+  target: prod
+  outputs:
+    prod:
+      project: clinica-volans
+      type: bigquery
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      threads: 4
+      schema: data
