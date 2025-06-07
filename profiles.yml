@@ -6,7 +6,7 @@ volans_dbt:
       type: bigquery
       job_execution_timeout_seconds: 300
       job_retries: 1
-      location: US
+      location: us-east1
       method: oauth
       priority: interactive
       threads: 4

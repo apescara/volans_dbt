@@ -4,3 +4,48 @@ sources:
     tables:
       - name: citas
       - name: pacientes
+  - name: google_sheets
+    description: >
+      This source contains data stored in Google Sheets that are manually maintained.
+    dataset: google_sheets
+    loader: external_table
+    tags:
+      - source
+      - google_sheet
+    tables:
+      - name: tratamientos
+        description: >
+          Maestra tratamientos
+        external:
+          options:
+            format: GOOGLE_SHEETS
+            uris:
+              [
+                "https://docs.google.com/spreadsheets/d/1cn2V9yoyN2Al9s4_AV3DmUV9e9qkhWurC03LruZnmz4",
+              ]
+            sheet_range: "Tratamientos"
+            skip_leading_rows: 1
+        columns:
+          - name: tratamiento
+            data_type: STRING
+          - name: categoria_tratamiento
+            data_type: STRING
+          - name: tratamiento_origen
+            data_type: BOOL
+      - name: profesionales
+        description: >
+          Maestra profesionales
+        external:
+          options:
+            format: GOOGLE_SHEETS
+            uris:
+              [
+                "https://docs.google.com/spreadsheets/d/1cn2V9yoyN2Al9s4_AV3DmUV9e9qkhWurC03LruZnmz4",
+              ]
+            sheet_range: "Profesionales"
+            skip_leading_rows: 1
+        columns:
+          - name: profesional
+            data_type: STRING
+          - name: categoria_profesional
+            data_type: STRING
